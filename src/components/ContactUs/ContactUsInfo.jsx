@@ -6,31 +6,31 @@ import { Email, Phone, LocationOn, Schedule } from "@mui/icons-material"
 const contactInfo = [
   {
     icon: <Email className="h-6 w-6" />,
-    title: "Email Us",
-    details: ["mahtodineshwar5@gmail.com"],
-    description: "Send us an email anytime",
+    title: "EMAIL US",
+    details: ["MAHTODINESHWAR5@GMAIL.COM"],
+    description: "SEND US AN EMAIL ANYTIME",
   },
   {
     icon: <Phone className="h-6 w-6" />,
-    title: "Call Us",
+    title: "CALL US",
     details: ["+91 9934338395"],
-    description: "Available during business hours",
+    description: "AVAILABLE DURING BUSINESS HOURS",
   },
   {
     icon: <LocationOn className="h-6 w-6" />,
-    title: "Visit Us",
+    title: "VISIT US",
     details: [
-      "Dr. D Mahto",
-      "Co-operative colony, Dipugarha",
-      "Hazaribagh, Jharkhand - 825301",
+      "DR. D MAHTO",
+      "CO-OPERATIVE COLONY, DIPUGARHA",
+      "HAZARIBAGH, JHARKHAND - 825301",
     ],
-    description: "Come say hello at our office",
+    description: "COME SAY HELLO AT OUR OFFICE",
   },
   {
     icon: <Schedule className="h-6 w-6" />,
-    title: "Business Hours",
-    details: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 10:00 AM - 4:00 PM"],
-    description: "Sunday: Closed",
+    title: "BUSINESS HOURS",
+    details: ["MONDAY - FRIDAY: 9:00 AM - 6:00 PM", "SATURDAY: 10:00 AM - 4:00 PM"],
+    description: "SUNDAY: CLOSED",
   },
 ]
 
@@ -45,12 +45,12 @@ export default function ContactUsInfo() {
           transition={{ duration: 0.5 }}
           className="max-w-lg mx-auto"
         >
-          <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+          <h2 className="text-2xl font-bold mb-6 uppercase">CONTACT INFORMATION</h2>
           <div className="space-y-6">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-sm border border-border"
+                className="bg-white p-6 rounded-lg shadow-sm border border-border uppercase"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

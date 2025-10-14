@@ -29,11 +29,11 @@ export default function ContactUsForm() {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000))
 
-      toast("Message sent successfully! We'll get back to you soon.", toastTypes.SUCCESS)
+      toast("MESSAGE SENT SUCCESSFULLY! WE'LL GET BACK TO YOU SOON.", toastTypes.SUCCESS)
       setFormData({ name: "", email: "", subject: "", message: "" })
     } catch (error) {
       console.error("Error submitting form:", error)
-      toast("Failed to send message. Please try again.", toastTypes.ERROR)
+      toast("FAILED TO SEND MESSAGE. PLEASE TRY AGAIN.", toastTypes.ERROR)
     } finally {
       setIsLoading(false)
     }
@@ -51,17 +51,17 @@ export default function ContactUsForm() {
         >
           <div className="bg-white/90 backdrop-blur-xl border border-gray-200 rounded-3xl shadow-xl p-10">
             <h2 className="text-3xl font-bold mb-6 text-center text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-500">
-              Send us a Message
+              SEND US A MESSAGE
             </h2>
             <p className="text-center text-gray-500 mb-10">
-              Have questions or feedback? Fill out the form below — we’d love to hear from you.
+              HAVE QUESTIONS OR FEEDBACK? FILL OUT THE FORM BELOW — WE’D LOVE TO HEAR FROM YOU.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
+              {/* NAME */}
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold mb-2 text-gray-700">
-                  Full Name
+                  FULL NAME
                 </label>
                 <input
                   type="text"
@@ -69,16 +69,16 @@ export default function ContactUsForm() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 focus:border-indigo-400 shadow-sm transition"
-                  placeholder="Enter your full name"
+                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 focus:border-indigo-400 shadow-sm transition uppercase placeholder:uppercase"
+                  placeholder="ENTER YOUR FULL NAME"
                   required
                 />
               </div>
 
-              {/* Email */}
+              {/* EMAIL */}
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold mb-2 text-gray-700">
-                  Email Address
+                  EMAIL ADDRESS
                 </label>
                 <input
                   type="email"
@@ -86,38 +86,38 @@ export default function ContactUsForm() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 focus:border-indigo-400 shadow-sm transition"
-                  placeholder="you@example.com"
+                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 focus:border-indigo-400 shadow-sm transition uppercase placeholder:uppercase"
+                  placeholder="YOU@EXAMPLE.COM"
                   required
                 />
               </div>
 
-              {/* Subject */}
+              {/* SUBJECT */}
               <div>
                 <label htmlFor="subject" className="block text-sm font-semibold mb-2 text-gray-700">
-                  Subject
+                  SUBJECT
                 </label>
                 <select
                   id="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 focus:border-indigo-400 shadow-sm transition"
+                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 focus:border-indigo-400 shadow-sm transition uppercase"
                   required
                 >
-                  <option value="">Select a subject</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="technical">Technical Support</option>
-                  <option value="billing">Billing Question</option>
-                  <option value="astrologer">Astrologer Application</option>
-                  <option value="feedback">Feedback</option>
+                  <option value="">SELECT A SUBJECT</option>
+                  <option value="general">GENERAL INQUIRY</option>
+                  <option value="technical">TECHNICAL SUPPORT</option>
+                  <option value="billing">BILLING QUESTION</option>
+                  <option value="astrologer">ASTROLOGER APPLICATION</option>
+                  <option value="feedback">FEEDBACK</option>
                 </select>
               </div>
 
-              {/* Message */}
+              {/* MESSAGE */}
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold mb-2 text-gray-700">
-                  Message
+                  MESSAGE
                 </label>
                 <textarea
                   id="message"
@@ -125,21 +125,21 @@ export default function ContactUsForm() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 focus:border-indigo-400 shadow-sm transition"
-                  placeholder="Write your message here..."
+                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-indigo-200 focus:border-indigo-400 shadow-sm transition uppercase placeholder:uppercase"
+                  placeholder="WRITE YOUR MESSAGE HERE..."
                   required
                 />
               </div>
 
-              {/* Submit */}
+              {/* SUBMIT */}
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
                 type="submit"
                 disabled={isLoading}
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3.5 font-semibold shadow-md hover:shadow-lg hover:from-indigo-500 hover:to-purple-500 transition-all"
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3.5 font-semibold shadow-md hover:shadow-lg hover:from-indigo-500 hover:to-purple-500 transition-all uppercase"
               >
-                {isLoading ? "Sending..." : "Send Message"}
+                {isLoading ? "SENDING..." : "SEND MESSAGE"}
                 <Send className="h-5 w-5" />
               </motion.button>
             </form>

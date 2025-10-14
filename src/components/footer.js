@@ -1,34 +1,27 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material"
+import { Facebook, Twitter, Instagram, LinkedIn, YouTube } from "@mui/icons-material"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const services = [
     { name: "Horoscope Analysis", href: "/services/astrology" },
-    { name: "career Counselling", href: "/services/rudraksha" },
-    { name: "Astrological Marriage solutions", href: "/services/vastu" },
-    { name: "Astrological Helath Remedies", href: "/services/yagya" },
-    // { name: "Sound Energy Healing", href: "/services/sound-healing" },
-    // { name: "Tarot Card Readings", href: "/services/tarot" },
-    // { name: "Siddhi Puja Rituals", href: "/services/puja" },
-    // { name: "Vedic Sanatan Trust", href: "/services/vedic-trust" },
-    // { name: "Yagya", href: "/services/yagya" },
+    { name: "Career Counselling", href: "/services/rudraksha" },
+    { name: "Astrological Marriage Solutions", href: "/services/vastu" },
+    { name: "Astrological Health Remedies", href: "/services/yagya" },
   ]
 
   const company = [
-     { name: "Home", href: "/" },
+    { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },
-   
   ]
 
   const support = [
-    { name: "Help Center", href: "/help" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "FAQ", href: "/faq" },
+    { name: "Help Center", href: "/contact" },
+    { name: "Get in Touch", href: "/contact" },
+    { name: "FAQ", href: "/contact" },
   ]
 
   return (
@@ -36,21 +29,25 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-red-50 opacity-10"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Logo and Description */}
+          {/* Logo & Description */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-orange-500 rounded-full blur-sm opacity-20"></div>
-                <Image src="/logo.png" alt="TalkAstro Logo" width={40} height={40} className="relative z-10" />
+                <Image
+                  src="/logo.png"
+                  alt="TalkAstro Logo"
+                  width={40}
+                  height={40}
+                  className="relative z-10"
+                />
               </div>
               <span className="ml-2 text-xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                Dr D Mahto 
-
+                Dr D Mahto
               </span>
             </Link>
             <p className="mt-4 text-gray-600">
-              Connect with expert astrologers for personalized guidance on life, relationships, career, and spiritual
-              growth.
+              CONNECT WITH EXPERT ASTROLOGERS FOR PERSONALIZED GUIDANCE ON LIFE, RELATIONSHIPS, CAREER, AND SPIRITUAL GROWTH.
             </p>
 
             {/* Contact Info */}
@@ -68,48 +65,38 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <strong>Address:</strong> Dr D Mahto, Co-operative Colony, Dipugarha, Hazaribagh, Jharkhand – 825301
+                <strong>Address:</strong> DR D MAHTO, CO-OPERATIVE COLONY, DIPUGARHA, HAZARIBAGH, JHARKHAND – 825301
               </p>
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-4 mt-6">
-              <a
-                href="https://facebook.com"
+            <div className="mt-6 flex space-x-4 text-gray-600">
+              <Link
+                href="https://www.facebook.com/dr.d.mahto.18?mibextid=ZbWKwL"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-orange-500 transition-colors"
+                className="hover:text-orange-500"
               >
                 <Facebook />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a
-                href="https://twitter.com"
+              </Link>
+              <Link
+                href="https://www.instagram.com/dr.d.mahto.18?igsh=NnV3aTlrYmVqN2tz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-orange-500 transition-colors"
-              >
-                <Twitter />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-orange-500 transition-colors"
+                className="hover:text-orange-500"
               >
                 <Instagram />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <a
-                href="https://linkedin.com"
+              </Link>
+              <Link
+                href="https://youtube.com/@dineshwarmahto7606?si=9_hfASGqvB2gSMZt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-orange-500 transition-colors"
+                className="hover:text-orange-500"
               >
-                <LinkedIn />
-                <span className="sr-only">LinkedIn</span>
-              </a>
+                <YouTube />
+              </Link>
+          
+          
             </div>
           </div>
 
@@ -119,9 +106,12 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-2">
-              {services.slice(0, 5).map((service) => (
+              {services.map((service) => (
                 <li key={service.name}>
-                  <Link href={service.href} className="text-gray-600 hover:text-orange-500 transition-colors">
+                  <Link
+                    href={service.href}
+                    className="text-gray-600 hover:text-orange-500 transition-colors"
+                  >
                     {service.name}
                   </Link>
                 </li>
@@ -137,7 +127,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-gray-600 hover:text-orange-500 transition-colors">
+                  <Link
+                    href={item.href}
+                    className="text-gray-600 hover:text-orange-500 transition-colors"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -153,7 +146,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {support.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-gray-600 hover:text-orange-500 transition-colors">
+                  <Link
+                    href={item.href}
+                    className="text-gray-600 hover:text-orange-500 transition-colors"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -162,15 +158,23 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Footer Bottom */}
         <div className="border-t border-gray-200 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 text-sm">&copy; {currentYear} Dr D Mahto 
-. All rights reserved.</p>
+            <p className="text-gray-600 text-sm">
+              &copy; {currentYear} Dr D Mahto. All rights reserved.
+            </p>
             <div className="mt-4 md:mt-0 flex items-center space-x-6">
-              <Link href="/privacy" className="text-sm text-gray-600 hover:text-orange-500 transition-colors">
+              <Link
+                href="/privacy"
+                className="text-sm text-gray-600 hover:text-orange-500 transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-gray-600 hover:text-orange-500 transition-colors">
+              <Link
+                href="/terms"
+                className="text-sm text-gray-600 hover:text-orange-500 transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>
