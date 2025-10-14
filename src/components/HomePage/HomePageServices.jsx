@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const services = [
   {
-    id: "horoscope",
+    id: "HOROSCOPE",
     title: "Horoscope Analysis",
     description: "Get personalized horoscope insights to understand your life's path and opportunities.",
     icon: "/logo.png",
@@ -13,7 +13,7 @@ const services = [
     link: "/services/astrology",
   },
   {
-    id: "career",
+    id: "CAREER",
     title: "Career Counselling",
     description: "Receive astrological guidance to make informed decisions about your career and growth.",
     icon: "/logo.png",
@@ -21,23 +21,23 @@ const services = [
     link: "/career",
   },
   {
-    id: "marriage",
-    title: "Marriage Problem",
+    id: "MARRIAGE",
+    title: "Marriage Problems Solutions",
     description: "Find solutions for marriage-related issues with the help of astrological remedies.",
     icon: "/logo.png",
     color: "from-pink-500 to-rose-600",
     link: "/marriage",
   },
   {
-    id: "health",
-    title: "Health Issue",
+    id: "HEALTH",
+    title: "Health Issues solutions",
     description: "Discover root causes of health challenges and remedies through astrology.",
     icon: "/logo.png",
     color: "from-green-500 to-teal-600",
     link: "/health",
   },
   {
-    id: "others",
+    id: "OTHERS",
     title: "Other Problems",
     description: "Seek guidance and solutions for various personal and professional challenges.",
     icon: "/logo.png",
@@ -45,6 +45,7 @@ const services = [
     link: "/others",
   },
 ]
+
 
 export default function HomePageServices() {
   const container = {
@@ -73,7 +74,9 @@ export default function HomePageServices() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Our Services</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-black">
+  Our Services
+</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore our range of astrological services designed to guide you through life’s challenges and opportunities.
           </p>

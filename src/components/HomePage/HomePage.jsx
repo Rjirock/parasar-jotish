@@ -6,6 +6,8 @@ import HomePageServices from "./HomePageServices"
 import HomePageFeatures from "./HomePageFeatures"
 import HomePageTestimonials from "./HomePageTestimonials"
 import HomePageCTA from "./HomePageCTA"
+import AstrologyIntro from "@/components/HomePage/AstrologyIntro"
+
 
 export default function HomePage() {
   return (
@@ -17,11 +19,14 @@ export default function HomePage() {
     >
       {/* Hero Section */}
       <HomePageHero />
-
-      {/* Services Section */}
+         {/* Services Section */}
       <section id="services" className="py-20">
         <HomePageServices />
       </section>
+            <AstrologyIntro />
+
+
+   
 
       {/* Features Section */}
       {/* <section id="features" className="py-20 bg-gray-50">

@@ -25,8 +25,8 @@ export default function Navbar() {
   const services = [
     { name: "Horoscope Analysis", href: "/services/astrology" },
     { name: "Career counselling", href: "/services/rudraksha" },
-    { name: "Marriage Proplem", href: "/services/vastu" },
-    { name: "Health Issues", href: "/services/yagya" },
+    { name: "Marriage Related Issues", href: "/services/vastu" },
+    { name: "Health Realted Issues", href: "/services/yagya" },
   ]
 
   return (

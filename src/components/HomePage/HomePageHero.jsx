@@ -20,15 +20,18 @@ export default function HomePageHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Discover Your Path with{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-             Dr. D Mahto              </span>
-            </h1>
+<h1 className="text-4xl md:text-6xl font-bold mb-6">
+  <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
+    Discover Your Path with{" "}
+  </span>
+  <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+    Dr. D-Mahto
+  </span>
+</h1>
 
             <p className="text-lg md:text-xl text-gray-600 mb-8">
-              Connect with expert astrologers for personalized guidance on life,
-              relationships, career, and spiritual growth.
+   Connect with expert astrologers for personalized guidance on life, relationships, career, and spiritual growth.
+Unlock deeper insights into your destiny, overcome challenges with clarity, and align your actions with the cosmic energy that guides your true path.
             </p>
 
             {/* CTA Buttons */}
