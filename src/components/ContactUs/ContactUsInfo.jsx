@@ -31,7 +31,6 @@ const contactInfo = [
     title: "BUSINESS HOURS",
     details: ["MONDAY - SATURDAY: 6:00 PM - 10:00 PM"],
     description: "SUNDAY: 9:00 AM - 9:00 PM",
-    description: "ALSO AVAILABLE ON HOLIDAYS",
   },
 ]
 
