@@ -29,8 +29,8 @@ const contactInfo = [
   {
     icon: <Schedule className="h-6 w-6" />,
     title: "BUSINESS HOURS",
-    details: ["MONDAY - SATURDAY: 6:00 PM - 10:00 PM"],
-    description: "SUNDAY: 9:00 AM - 9:00 PM",
+    details: ["MONDAY - SATURDAY: 6:00 PM - 10:00 PM",
+            "SUNDAY: 9:00 AM - 9:00 PM" ],
   },
 ]
 
